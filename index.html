@@ -1,0 +1,251 @@
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChaChaChar</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/common.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</head>
+<body>
+   <style>
+       body *{letter-spacing: -1.5px; font-family: 'Pretendard'}
+       .main-wrap{
+           padding:96px 0 0 0;
+       }
+       .header{
+           position:fixed;
+           width:100%;
+           height:96px;
+           background-color:#ffffff;
+           -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+            -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+           z-index: 99;
+       }
+       .header-inner{
+           width:100%;
+           max-width: 1280px;
+           margin: 0 auto;
+           padding:20px 24px;
+       }
+       h1.mainLogo{
+           width:190px;
+           height:55px;
+           font-size:16px;
+           font-weight: 300;
+           text-align: right;
+           padding:10px 85px 0 0;
+           background:url(assets/img/logo1.png) no-repeat right center / 78px;
+           float:left;
+       }
+       .gnb{
+           float:left;
+           padding:0 124px;
+           width:calc(100% - 290px);
+           height: 56px;
+           line-height: 56px;
+       }
+       .gnb li a{
+           float:left;
+           margin-right:120px;
+           font-weight: 700;
+           font-size: 20px;
+       }
+       .gnb li:last-child a{margin:0;}
+       .snslink{
+           float:left;
+           width:100px;
+           text-align: right;
+       }
+       .snslink li{display: inline-block; padding: 12px 0;}
+       .snslink a{
+           width: 30px;
+           height:30px;
+           display: inline-block;
+           border-radius: 50%;
+           overflow: hidden;
+           text-indent: 200%;
+           white-space: nowrap;
+       }
+       .snslink li:first-child a{
+           background: url(assets/img/i-insta.png) no-repeat center center / cover;
+           margin-right: 24px;
+       }
+       .snslink li:nth-child(2) a{
+           background: url(assets/img/i-yt.png) no-repeat center center / cover;
+       }
+       .section{
+           width:100%;
+       }
+       .innerSec{
+           width:100%;
+           max-width: 1280px;
+           margin:0 auto;
+           padding: 0 24px;
+       }
+       .mainVs{
+           height: 500px;
+           background: url(assets/img/mainVs.png) no-repeat left -30px / 148%;
+           padding: 100px 60px 0 0;
+       }
+       .mainVs .bannerText{
+           width:100%;
+           height:200px;
+           text-indent: 200%;
+           white-space: nowrap;
+           overflow: hidden;
+           text-align: right;
+           background: url(assets/img/pc-banner.png) no-repeat right / 800px;
+       }
+       .mainVs .bannerAuto{
+           margin-top: 70px;
+           text-align: right;
+           font-size: 16px;
+       }
+       .main-wrap .sec2{
+           background:url(assets/img/bg4.png) no-repeat center bottom / 100%;
+           background-color:#33557E;
+       }
+       .main-wrap .sec2 .innerSec{
+           padding: 78px 24px;
+           color:#ffffff;
+       }
+       .main-wrap .sec2 h3{
+           text-align: center;
+           font-size: 58px;
+           font-weight: 200;
+           margin-bottom: 60px;
+       }
+       .mainUl li{
+           position: relative;
+           height: 100px;
+           margin-bottom: 46px;
+       }
+       .mainUl li .num{
+           position: absolute;
+           left: 10px;
+           width:96px;
+           height:96px;
+           background-color:#ffffff;
+           color:#012F72;
+           font-size: 42px;
+           font-weight: bold;
+           text-align: center;
+           line-height: 96px;
+           border-radius: 50%;
+       }
+       .mainUl li .num::after{
+           content: '';
+           position: absolute;
+           left: -12px;
+           top:-12px;
+           width:50px;
+           height:50px;
+           background:url(assets/img/listSt.png) no-repeat center / 70px;
+       }
+       .mainUl li a{
+           width:calc(100% - 80px);
+           position: absolute;
+           right: 0;
+           top:0;
+           color:#ffffff;
+       }
+       .mainUl li .title{
+           background-color:rgba(0, 45, 80, 0.8);
+           font-size: 32px;
+           font-weight: bold;
+           height: 96px;
+           line-height: 96px;
+           padding: 0 60px;
+           border-radius: 50px;
+       }
+       .mainUl li .title::after{
+           content: '';
+           display: block;
+           position: absolute;
+           right: 40px;
+           top: 0px;
+           width: 30px;
+           height:96px;
+           background:url(assets/img/listArrow.png) no-repeat center center / 15px;
+       }
+   </style>
+    <div class="wrap">
+        <header class="header">
+            <div class="header-inner">
+                <h1 class="mainLogo clearfix">서울대학교 <b>총장</b><br>후보 대상자</h1>
+                <ul class="gnb">
+                    <li><a href="">차국헌입니다</a></li>
+                    <li><a href="">공약</a></li>
+                    <li><a href="">로드맵</a></li>
+                    <li><a href="">활동</a></li>
+                </ul>
+                <ul class="snslink">
+                    <li><a href="">insta</a></li>
+                    <li><a href="">youtube</a></li>
+                </ul>
+            </div>
+            
+        </header>
+        <div class="main-wrap clearfix">
+            <div class="section sec1">
+                <div class="innerSec mainVs">
+                    <p class="bannerText">
+                        <span class="textblue">지속가능한 미래</span>를 여는 <b class="textblue">행복 지식공동체</b>, <span class="textblue">차국헌</span>이 여러분과 함께 하겠습니다. 
+                    </p>
+                    <p class="bannerAuto">
+                        서울대학교 <b>총장</b> 예비후보자<br>
+                        <img src="assets/img/banner-3.png" alt="">
+                    </p>
+                </div>
+            </div>
+            <div class="section sec2">
+                <div class="innerSec">
+                    <h3><b>차국헌</b>이 약속합니다.</h3>
+                    <ul class="mainUl">
+                        <li>
+                            <a href=""><div class="title">교육혁신을 통한 핵심 인력 배출, 평생 교육 지원</div></a>
+                            <div class="num">1</div>
+                        </li>
+                        <li>
+                            <a href=""><div class="title">세계 최고 수준의 연구를 위한 개인연구와 집단연구 지원</div></a>
+                            <div class="num">2</div>
+                        </li>
+                        <li>
+                            <a href=""><div class="title">세계와 함께 성장하는 더 큰 대학 구현</div></a>
+                            <div class="num">3</div>
+                        </li>
+                        <li>
+                            <a href=""><div class="title">법인화에 걸맞은 혁신 추진력과 책임성 확보가 가능한 협치형 거버넌스 구축</div></a>
+                            <div class="num">4</div>
+                        </li>
+                        <li>
+                            <a href=""><div class="title">발전기금 및 자체재원 확대</div></a>
+                            <div class="num">5</div>
+                        </li>
+                        <li>
+                            <a href=""><div class="title">지역사회와 연계한 환경 친화적 캠퍼스 구축, 과감한 복지 환경 개선</div></a>
+                            <div class="num">6</div>
+                        </li>
+                    </ul>
+                    <button class="btn btn-white">발전계획서 파일 보기</button>
+                </div>
+            </div>
+        </div>
+        <div class="main-footer">
+            <div class="mainfoot-in">
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
