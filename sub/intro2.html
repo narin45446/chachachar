@@ -1,0 +1,341 @@
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChaChaChar</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href="../assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/common.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+</head>
+<body>
+   <style>
+       @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;800&display=swap');
+       .introHd-wrap2{
+           position: relative;
+           padding: 32px 0 0;
+        }
+       .introHd-wrap2 .subVs{
+           float:right;
+       }
+       .introHd-wrap2 .subintro{
+           left:0; 
+           right:auto;
+           padding: 0 20px;
+       }
+       .historyTtl{
+           font-size: 32px;
+           padding-bottom: 20px;
+           margin: 90px 0 32px;
+           color:#094CB1;
+           width:280px;
+           border-bottom: 1px solid #094CB1;
+           white-space: nowrap;
+       }
+       .history-tbl{
+           font-size: 18px;
+       }
+       .history-tbl th{
+           position: relative;
+           font-weight: 300;
+           border-right: 2px solid #D6D6D6;
+           vertical-align: text-top;
+           padding-top: 10px;
+       }
+       .history-tbl td::after{
+           content: '';
+           display:block;
+           width:10px;
+           height:10px;
+           background-color:#D6D6D6;
+           border-radius: 50%;
+           position: absolute;
+           left:-6px;
+           top:18px;
+       }
+       .history-tbl tr:first-child th::after{
+           content: '';
+           display: block;
+           width: 4px;
+           height: 20px;
+           background-color:#ffffff;
+           position: absolute;
+           right: -3px;
+           top:0;
+       }
+       .history-tbl tr:last-child th::after{
+           content: '';
+           display: block;
+           width: 4px;
+           height: 20px;
+           background-color:#ffffff;
+           position: absolute;
+           right: -3px;
+           bottom:0;
+       }
+       .history-tbl td{
+           position:relative;
+           padding: 14px 0 14px 50px;
+           font-weight: 700;
+       }
+       .history-tbl .blue td, .history-tbl .blue b{
+           color:#094CB1;
+       }
+       .history-tbl .blue td::after{
+           background-color:#2495CF;
+       }
+       .history-tbl .gray td::after{
+           background-color:#f0f0f0;
+       }
+       .historyUl li{
+           position: relative;
+           padding-left: 30px;
+           margin-bottom: 20px;
+       }
+       .historyUl li::before{
+           content: '';
+           display: block;
+           width:10px;
+           height:10px;
+           background-color:#D6D6D6;
+           border-radius: 50%;
+           position: absolute;
+           left: 3px;
+           top:6px;
+       }
+       .historyUl.bold{
+           font-weight: 700;
+       }
+       @media screen and (max-width:766px) {
+           .historyTtl{
+               font-size: 24p;
+               width: 100%;
+               margin-top:40px;
+               margin-bottom:24px;
+           }
+           .history-tbl{
+               font-size:14px;
+           }
+           .history-tbl th{
+               width:110px;
+               letter-spacing: -0.6px;
+           }
+           .history-tbl td::after{
+               top:16px;
+           }
+           .history-tbl td{
+               padding-left:20px;
+               letter-spacing: -0.6px;
+           }
+           .historyTtl span{
+               font-size: 16px;
+           }
+       }
+   </style>
+    <div class="wrap intro-wrap">
+        <header class="header">
+            <div class="header-inner">
+                <h1 class="mainLogo clearfix">서울대학교 <b>총장</b><br>후보 대상자</h1>
+                <ul class="gnb">
+                    <li><a href="">차국헌입니다</a></li>
+                    <li><a href="">공약</a></li>
+                    <li><a href="">로드맵</a></li>
+                    <li><a href="">활동</a></li>
+                </ul>
+                <ul class="snslink">
+                    <li><a href="">insta</a></li>
+                    <li><a href="">youtube</a></li>
+                </ul>
+            </div>
+            
+        </header>
+        <div class="clearfix" style="background:url(../assets/img/bg3.png) no-repeat right bottom / 100% fixed">
+            <div class="section sec1 subBannerSec">
+                <div class="subBanner">
+                   <div class="innerSec">
+                       <h2 class="subttl">차국헌입니다</h2>
+                        <p>우리 사회 지성의 대표로서 총장의 품격을 지키겠습니다.</p>
+                   </div>
+                </div>
+            </div>
+            <div class="section sec2">
+                <div class="innerSec">
+                    <div class="introHd-wrap2 clearfix">
+                        <div class="subVs">
+                            <img src="../assets/img/subVs2.png" alt="" data-aos="zoom-out">
+                        </div>
+                        <div class="subintro">
+                           <div class="line"></div>
+                            <p data-aos="zoom-out">"제가 가진 모든 경험과 역량을<br>다 쏟아붓겠습니다."</p>
+                            <p class="name" data-aos="zoom-out">서울대 화학생물공학부 교수 <span class="auto">차국헌</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section sec3">
+                <div class="innerSec text-df">
+                    <h3 class="historyTtl" data-aos="fade-up">
+                        학력
+                    </h3>
+                    <table class="history-tbl" data-aos="fade-up">
+                        <tr>
+                            <th width="180px">1964 ～ 1989</th>
+                            <td>미국 Stanford 대학교 화학공학 박사</td>
+                        </tr>
+                        <tr>
+                            <th>1981 ～ 1983</th>
+                            <td>한국과학기술원 (KAIST) 화학공학 석사</td>
+                        </tr>
+                        <tr>
+                            <th>1977 ～ 1981</th>
+                            <td>서울대학교 화학공학 학사</td>
+                        </tr>
+                    </table>
+                    <h3 class="historyTtl" data-aos="fade-up">
+                        경력
+                    </h3>
+                    <table class="history-tbl" data-aos="fade-up">
+                        <tr>
+                            <th width="180px">2021 ～ 2022</th>
+                            <td>서울대학교 장기발전계획연구 분야 연구 책임자</td>
+                        </tr>
+                        <tr>
+                            <th>2017 ～ 2021</th>
+                            <td>서울대학교 공과대학 학장</td>
+                        </tr>
+                        <tr>
+                            <th>2019</th>
+                            <td>한국고분자학회 회장</td>
+                        </tr>
+                        <tr>
+                            <th>2019 ～ 2021</th>
+                            <td>석좌교수위원회 위원</td>
+                        </tr>
+                        <tr class="blue">
+                            <th>2017 ～ <b>현재</b></th>
+                            <td>한국공학한림원 상임 부회장</td>
+                        </tr>
+                        <tr>
+                            <th>2010 ～ 2017</th>
+                            <td>Intelligent Hybrids 창의연구단장</td>
+                        </tr>
+                        <tr class="blue">
+                            <th>2011 ～ <b>현재</b></th>
+                            <td>독일 구텐베르그 연구재단(GRC) 석학회원</td>
+                        </tr>
+                        <tr class="blue">
+                            <th>2010 ～ <b>현재</b></th>
+                            <td>미국 물리학회 석학회원</td>
+                        </tr>
+                        <tr>
+                            <th>2010 ～ 2010</th>
+                            <td>서울대학교 공과대학 화학생물공학부 학부장</td>
+                        </tr>
+                        <tr>
+                            <th>2006 ～ 2007</th>
+                            <td>서울대학교 정보화본부 (19대) 본부장 (현 정보화지원실)</td>
+                        </tr>
+                        <tr class="blue">
+                            <th>1991 ～ <b>현재</b></th>
+                            <td>서울대학교 공과대학 화학생물공학부 조교수·부교수·교수</td>
+                        </tr>
+                        <tr>
+                            <th>1990 ～ 1991</th>
+                            <td>LG화학 중앙연구소 선임연구원</td>
+                        </tr>
+                        <tr>
+                            <th>1989 ～ 1990</th>
+                            <td>미국 IBM Almaden Research Center Visiting Scholar</td>
+                        </tr>
+                    </table>
+                    <h3 class="historyTtl" data-aos="fade-up">
+                        주요 연구분야
+                    </h3>
+                    <ul class="historyUl" data-aos="fade-up">
+                        <li>주전공 : 고분자 및 하이브리드 재료</li>
+                        <li>부전공 : 반도체 양자점 제조 및 소자 개발, 고분자 물리 및 나노구조 분석 황을 이용한 차세대 배터리 및 광학소재 개발 </li>
+                        <li>SCI 논문: 396편 H-Index: 69</li>
+                    </ul>
+                    <h3 class="historyTtl" data-aos="fade-up">
+                        수상 내역
+                    </h3>
+                    <table class="history-tbl" data-aos="fade-up">
+                        <tr>
+                            <th width="130px">2020</th>
+                            <td>SPSJ International Award (일본 SPSJ, 2020)</td>
+                        </tr>
+                        <tr class="gray">
+                            <th></th>
+                            <td>인촌기념회 인촌상 (인촌기념회, 2020)</td>
+                        </tr>
+                        <tr>
+                            <th>2017</th>
+                            <td>TOTAL Visiting Scholar Award (프랑스 ESPCI, 2017)</td>
+                        </tr>
+                        <tr>
+                            <th>2012</th>
+                            <td>삼성고분자학술상 (한국고분자학회, 2012)</td>
+                        </tr>
+                        <tr class="gray">
+                            <th></th>
+                            <td>신양공학학술상 (서울대학교 공과대학, 2011)</td>
+                        </tr>
+                        <tr>
+                            <th>2011</th>
+                            <td>독일 구텐베르그 연구재단(GRC) 석학회원 (2011)</td>
+                        </tr>
+                        <tr>
+                            <th>2010</th>
+                            <td>미국 물리학회 석학회원 (2010)</td>
+                        </tr>
+                        <tr>
+                            <th>2006</th>
+                            <td>Gutenberg Research Award (독일 JGU Mainz &amp; 독일 화학회, 2006)   </td>
+                        </tr>
+                        <tr>
+                            <th>2005</th>
+                            <td>Best Chemical Engineer Award (한국화학공학회, 2005)</td>
+                        </tr>
+                    </table>
+                    <h3 class="historyTtl" data-aos="fade-up">
+                        업적 요약 <span>(2017. 09 ~ 2021. 08)</span>
+                    </h3>
+                    <ul class="historyUl bold" data-aos="fade-up">
+                        <li>해동과학문화재단 (고)김정식 회장으로부터 AI 관련 연구소 건물 건립을 위해 500억원 기부(서울공대 지정) 받음(2019년)</li>
+                        <li>학장 임기 중 해동첨단공학관(~500억) 신축, 41동 대형 강의실 재건축(~250억) 및 32동 광장 재건축(~800억) 3개 대형 컴플렉스 건설 주도</li>
+                        <li>간호대 관악캠퍼스 이전을 위한 (학내) 갈등 해소 주도 및 부지/재정 확보(32동 인근 광장 재건축 확정)</li>
+                        <li>공대 내 여성교원 9명 임용(차국헌 학장 임기(4년) 전 서울공대 72년 역사에 12명의 여성 교원 임용); Asia Dean’s Forum(ADF) 주도하면서 여성교원 확보를 위한 Rising Stars; Women in Engineering 국제행사 서울공대 개최(2019년); 학내 EDI(Equity, Diversity and Inclusiveness) 정신 고취</li>
+                        <li>학부 및 대학원 창업정신(Entrepreneurship) 고취를 위한 행사 및 모금(동부재단, 동서식품 및 해동과학문화재단 지원), 기술지주 회사를 통한 서울공대 사모펀드 조성 시작(1차 50억)</li>
+                        <li>4차산업혁명 시대 대비를 위한 서울공대 학생의 IoT, AI 및 Big Data 개론 수강을 위한 강의(IAB, Flipped Learning with 100 GPUs) 개설; CSB(Cyber Security and Block Chain) 강좌도 개설하여 서울공대를 넘어 서울대 커뮤니티 전체에 개방</li>
+                        <li>삼성전자와 SK Hynix 요청으로 차세대반도체 인력양성을 위한 프로그램(전략적 산학협력) 론칭(2019년) 및 다른 글로벌 기업으로 확산</li>
+                        <li>서울공대 무기직 직원 호봉제에서 연봉제로 전환</li>
+                    </ul>
+                    <div class="btnCenterBox mb60">
+                        <button class="btn btn-blue mt60" data-aos="fade-up">이력서 파일 보기</button><br>
+                        <button class="btn btn-blue mt10" data-aos="fade-up">상훈, 포상 내역 파일 보기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-footer">
+            <div class="mainfoot-in">
+                <ul>
+                    <li>주소 : 서울시 관악구 관악로 1 서울대학교 공과대학 화학생물공학부 302동 725호</li>
+                    <li>대표 E-mail : khchar@snu.ac.kr</li>
+                    <li>대표전화 : 02-880-7431</li>
+                </ul>
+            </div>s
+        </div>
+    </div>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
