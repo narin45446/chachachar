@@ -25,48 +25,26 @@ function handleMouseDownOnce() {
 
 window.addEventListener('keydown', handleFirstTab);
 
-//체크박스
-$(function(){
-  $('#all-chk').click(function(){
-     var chk = $(this).is(':checked');//.attr('checked');
-      if(chk) $('.checklist input[type="checkbox"]').prop('checked',true);
-      else $('.checklist input').prop('checked',false);
-  });
-});
-
-//파일첨부
-var uploadFile = $('.fileBox .uploadBtn');
-uploadFile.on('change', function(){
-    if(window.FileReader){
-        var filename = $(this)[0].files[0].name;
-    } else {
-        var filename = $(this).val().split('/').pop().split('\\').pop();
+$('.gnb>li').mouseenter(function(){
+    if($(this).find('.gnbsub').length){
+        $(".gnbsubBg").addClass('on'); 
     }
-    $(this).siblings('.fileName').val(filename);
 });
-$('.file-up-con .cancel-btn').click(function(){
-    $(this).parent().remove();
-})
-
-//팝업닫기
-$('.cancelbtn, .close-btn').click(function(){
-    $(this).parents('.popup').removeClass('on')
+$('.gnb>li').mouseleave(function(){
+    if($(this).find('.gnbsub').length){
+        $(".gnbsubBg").removeClass('on'); 
+    }
 });
-
-//네비,카테고리
+// header
 $('.ham-btn').click(function(){
-    $('.category').addClass('on');
-    $('body').attr('style', 'overflow:hidden');
-  });
-$('.cate-close, .cate-bg').click(function(){
-    $('.category').removeClass('on');
+    $('.ham').addClass('on');
+});
+$('.ham-close').click(function(){
+    $('.ham').removeClass('on');
     $('body').attr('style', '');
 });
-
-//팝업 열기 닫기
-function popupshow(){
-    $("body").addClass("popup-show");
-}
-function popupclose(){
-    $("body").removeClass("popup-show");
-}
+$('.bot-btn').click(function(){
+    $(this).toggleClass('on');
+    $(this).next('a').toggleClass('on');
+    $(this).next().next().toggleClass('on');
+});

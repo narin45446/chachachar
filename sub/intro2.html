@@ -18,144 +18,68 @@
 <body>
    <style>
        @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;800&display=swap');
-       .introHd-wrap2{
-           position: relative;
-           padding: 32px 0 0;
-        }
-       .introHd-wrap2 .subVs{
-           float:right;
-       }
-       .introHd-wrap2 .subintro{
-           left:0; 
-           right:auto;
-           padding: 0 20px;
-       }
-       .historyTtl{
-           font-size: 32px;
-           padding-bottom: 20px;
-           margin: 90px 0 32px;
-           color:#094CB1;
-           width:280px;
-           border-bottom: 1px solid #094CB1;
-           white-space: nowrap;
-       }
-       .history-tbl{
-           font-size: 18px;
-       }
-       .history-tbl th{
-           position: relative;
-           font-weight: 300;
-           border-right: 2px solid #D6D6D6;
-           vertical-align: text-top;
-           padding-top: 10px;
-       }
-       .history-tbl td::after{
-           content: '';
-           display:block;
-           width:10px;
-           height:10px;
-           background-color:#D6D6D6;
-           border-radius: 50%;
-           position: absolute;
-           left:-6px;
-           top:18px;
-       }
-       .history-tbl tr:first-child th::after{
-           content: '';
-           display: block;
-           width: 4px;
-           height: 20px;
-           background-color:#ffffff;
-           position: absolute;
-           right: -3px;
-           top:0;
-       }
-       .history-tbl tr:last-child th::after{
-           content: '';
-           display: block;
-           width: 4px;
-           height: 20px;
-           background-color:#ffffff;
-           position: absolute;
-           right: -3px;
-           bottom:0;
-       }
-       .history-tbl td{
-           position:relative;
-           padding: 14px 0 14px 50px;
-           font-weight: 700;
-       }
-       .history-tbl .blue td, .history-tbl .blue b{
-           color:#094CB1;
-       }
-       .history-tbl .blue td::after{
-           background-color:#2495CF;
-       }
-       .history-tbl .gray td::after{
-           background-color:#f0f0f0;
-       }
-       .historyUl li{
-           position: relative;
-           padding-left: 30px;
-           margin-bottom: 20px;
-       }
-       .historyUl li::before{
-           content: '';
-           display: block;
-           width:10px;
-           height:10px;
-           background-color:#D6D6D6;
-           border-radius: 50%;
-           position: absolute;
-           left: 3px;
-           top:6px;
-       }
-       .historyUl.bold{
-           font-weight: 700;
-       }
-       @media screen and (max-width:766px) {
-           .historyTtl{
-               font-size: 24p;
-               width: 100%;
-               margin-top:40px;
-               margin-bottom:24px;
-           }
-           .history-tbl{
-               font-size:14px;
-           }
-           .history-tbl th{
-               width:110px;
-               letter-spacing: -0.6px;
-           }
-           .history-tbl td::after{
-               top:16px;
-           }
-           .history-tbl td{
-               padding-left:20px;
-               letter-spacing: -0.6px;
-           }
-           .historyTtl span{
-               font-size: 16px;
-           }
-       }
    </style>
     <div class="wrap intro-wrap">
         <header class="header">
             <div class="header-inner">
-                <h1 class="mainLogo clearfix">서울대학교 <b>총장</b><br>후보 대상자</h1>
+                <a href="../index.html"><h1 class="mainLogo clearfix">서울대학교 <b>총장</b><br>후보 대상자</h1></a>
                 <ul class="gnb">
-                    <li><a href="">차국헌입니다</a></li>
-                    <li><a href="">공약</a></li>
-                    <li><a href="">로드맵</a></li>
-                    <li><a href="">활동</a></li>
+                    <li>
+                       <a href="intro.html">차국헌입니다</a>
+                       <ul class="gnbsub">
+                           <li><a href="intro.html">소개</a></li>
+                           <li><a href="intro2.html">이력</a></li>
+                       </ul> 
+                    </li>
+                    <li><a href="promise.html">공약</a></li>
+                    <li>
+                        <a href="roadmap">로드맵</a>
+                        <ul class="gnbsub">
+                           <li><a href="roadmap.html">쇼츠</a></li>
+                           <li><a href="roadmap2.html">포스터</a></li>
+                       </ul> 
+                    </li>
+                    <li><a href="pic">활동</a></li>
                 </ul>
                 <ul class="snslink">
-                    <li><a href="">insta</a></li>
-                    <li><a href="">youtube</a></li>
+                    <li><a href="https://instagram.com/kookheon_char?igshid=YmMyMTA2M2Y=" target="_blank">insta</a></li>
+                    <li><a href="" target="_blank">youtube</a></li>
                 </ul>
+                <button class="ham-btn"></button>
             </div>
-            
+            <div class="gnbsubBg"></div>
         </header>
+        <div class="ham">
+            <div class="right-bg"></div>
+            <div class="ham-nav">
+                <div class="ham-hd">
+                    <button class="ham-close"></button>
+                    <a href="myinfo.html" class="setting"></a>
+                </div>
+                <div class="ham-con">
+                    <ul class="ham-gnb">
+                        <li>
+                            <button class="bot-btn on"></button><a href="intro.html" class="on">차국헌입니다</a>
+                            <ul class="ham-lnb on">
+                                <li><a href="intro.html">소개</a></li>
+                                <li><a href="intro2.html">이력</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="promise.html">공약</a>
+                        </li>
+                        <li>
+                            <button class="bot-btn on"></button><a href="roadmap.html" class="on">로드맵</a>
+                            <ul class="ham-lnb on">
+                                <li><a href="roadmap.html">쇼츠</a></li>
+                                <li><a href="roadmap2.html">포스터</a></li>
+                            </ul>
+                        </li>
+                        <li class="lnbBgN"><a href="pic.html">활동</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <div class="clearfix" style="background:url(../assets/img/bg3.png) no-repeat right bottom / 100% fixed">
             <div class="section sec1 subBannerSec">
                 <div class="subBanner">
@@ -334,6 +258,7 @@
             </div>s
         </div>
     </div>
+    <script src="../assets/js/common.js"></script>
     <script>
         AOS.init();
     </script>

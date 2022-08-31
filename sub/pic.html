@@ -1,0 +1,248 @@
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChaChaChar</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href="../assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/common.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+</head>
+<body>
+   <style>
+       .gallery .thumbBox{
+           background-repeat: no-repeat;
+           background-position: center;
+           background-size:cover;
+       }
+       .gallery .liWrap{
+           position: relative;
+       }
+       .gallery .liTtl{
+           position: absolute;
+           bottom:0;
+           color:#ffffff;
+           font-size: 16px;
+           padding: 0 14px 14px 14px;
+       }
+       .gallery .liTtl span{
+           font-size:14px;
+           font-weight: 300;
+           display: inline-block;
+           margin-bottom: 4px;
+       }
+       .gallery .playbtn{
+           opacity: 100;
+           background-color: background: rgb(0,0,0);
+            background: -webkit-linear-gradient(bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 46%);
+            background: -o-linear-gradient(bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 46%);
+            background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 46%);
+           transition: none;
+       }
+       .gallery .liWrap:hover .playbtn{
+           background:rgba(0, 33, 124, 0.6)
+       }
+       .gallery .liWrap:hover .liTtl{
+           bottom:50%;
+           transform: translateY(50%);
+       }
+    </style>
+    <div class="wrap">
+        <header class="header">
+            <div class="header-inner">
+                <a href="../index.html"><h1 class="mainLogo clearfix">서울대학교 <b>총장</b><br>후보 대상자</h1></a>
+                <ul class="gnb">
+                    <li>
+                       <a href="intro.html">차국헌입니다</a>
+                       <ul class="gnbsub">
+                           <li><a href="intro.html">소개</a></li>
+                           <li><a href="intro2.html">이력</a></li>
+                       </ul> 
+                    </li>
+                    <li><a href="promise.html">공약</a></li>
+                    <li>
+                        <a href="roadmap">로드맵</a>
+                        <ul class="gnbsub">
+                           <li><a href="roadmap.html">쇼츠</a></li>
+                           <li><a href="roadmap2.html">포스터</a></li>
+                       </ul> 
+                    </li>
+                    <li><a href="pic">활동</a></li>
+                </ul>
+                <ul class="snslink">
+                    <li><a href="https://instagram.com/kookheon_char?igshid=YmMyMTA2M2Y=" target="_blank">insta</a></li>
+                    <li><a href="" target="_blank">youtube</a></li>
+                </ul>
+                <button class="ham-btn"></button>
+            </div>
+            <div class="gnbsubBg"></div>
+        </header>
+        <div class="ham">
+            <div class="right-bg"></div>
+            <div class="ham-nav">
+                <div class="ham-hd">
+                    <button class="ham-close"></button>
+                    <a href="myinfo.html" class="setting"></a>
+                </div>
+                <div class="ham-con">
+                    <ul class="ham-gnb">
+                        <li>
+                            <button class="bot-btn on"></button><a href="intro.html" class="on">차국헌입니다</a>
+                            <ul class="ham-lnb on">
+                                <li><a href="intro.html">소개</a></li>
+                                <li><a href="intro2.html">이력</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="promise.html">공약</a>
+                        </li>
+                        <li>
+                            <button class="bot-btn on"></button><a href="roadmap.html" class="on">로드맵</a>
+                            <ul class="ham-lnb on">
+                                <li><a href="roadmap.html">쇼츠</a></li>
+                                <li><a href="roadmap2.html">포스터</a></li>
+                            </ul>
+                        </li>
+                        <li class="lnbBgN"><a href="pic.html">활동</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix">
+            <div class="section sec1 subBannerSec">
+                <div class="subBanner">
+                   <div class="innerSec">
+                       <h2 class="subttl">활동</h2>
+                        <p>모든 구성원이 의미있는 일을 재미있게 할 수 있는 행복한 분위기를 만들도록 제가 가진 모든 경험과 역량을 다 쏟아붓겠습니다. </p>
+                   </div>
+                </div>
+            </div>
+            <div class="section sec2 list">
+                <div class="innerSec clearfix listSec gallery">
+                   <div>
+                       <div class="liWrap">
+                               <div class="thumbBox" style="background-image:url(../assets/img/210304.png)">
+                                   <div class="playbtn"></div>
+                               </div>
+                               <p class="liTtl">
+                               <span>2021.03.04</span><br>SNU해동 스타트업 데모데이
+                               </p>
+                       </div>
+                       <div class="liWrap">
+                               <div class="thumbBox" style="background-image:url(../assets/img/210324.png)">
+                                   <div class="playbtn"></div>
+                               </div>
+                               <p class="liTtl">
+                               <span>2021.03.24</span><br>산업부-공과대학장 정례협의회 발족식
+                               </p>
+                       </div>
+                       <div class="liWrap">
+                               <div class="thumbBox" style="background-image:url(../assets/img/210218.png)">
+                                   <div class="playbtn"></div>
+                               </div>
+                               <p class="liTtl">
+                               <span>2021.02.18</span><br>AIP총동창회 정기학술세미나
+                               </p>
+                       </div>
+                       <div class="liWrap">
+                               <div class="thumbBox" style="background-image:url(../assets/img/191202.png)">
+                                   <div class="playbtn"></div>
+                               </div>
+                               <p class="liTtl">
+                               <span>2019.12.02</span><br>육군미래혁신연구센터 기술교류회
+                               </p>
+                       </div>
+                       <div class="liWrap">
+                               <div class="thumbBox" style="background-image:url(../assets/img/191024.png)">
+                                   <div class="playbtn"></div>
+                               </div>
+                               <p class="liTtl">
+                               <span>2019.10.24</span><br>The Rising Stars
+                               </p>
+                       </div>
+                       <div class="liWrap">
+                               <div class="thumbBox" style="background-image:url(../assets/img/190918.png)">
+                                   <div class="playbtn"></div>
+                               </div>
+                               <p class="liTtl">
+                               <span>2019.09.18</span><br>2019년 창의설계축전
+                               </p>
+                       </div>
+                       <div class="liWrap">
+                               <div class="thumbBox" style="background-image:url(../assets/img/181102.png)">
+                                   <div class="playbtn"></div>
+                               </div>
+                               <p class="liTtl">
+                               <span>2018.11.02</span><br>제6회 서울대공대 공대-의대-병원 의료기기 포럼
+                               </p>
+                       </div>
+                       <div class="liWrap">
+                               <div class="thumbBox" style="background-image:url(../assets/img/180913.png)">
+                                   <div class="playbtn"></div>
+                               </div>
+                               <p class="liTtl">
+                               <span>2018.09.13</span><br>2018년 창의설계축전2
+                               </p>
+                       </div>
+                       <div class="liWrap">
+                               <div class="thumbBox" style="background-image:url(../assets/img/180322.png)">
+                                   <div class="playbtn"></div>
+                               </div>
+                               <p class="liTtl">
+                               <span>2018.03.22</span><br>서울대 공대-미국 DPR 건설 업무 협약
+                               </p>
+                       </div>
+                       <div class="liWrap">
+                               <div class="thumbBox" style="background-image:url(../assets/img/180302.png)">
+                                   <div class="playbtn"></div>
+                               </div>
+                               <p class="liTtl">
+                               <span>2018.03.02</span><br>2018년 공학전문대학원 입학식
+                               </p>
+                       </div>
+                       <div class="liWrap">
+                               <div class="thumbBox" style="background-image:url(../assets/img/171219.png)">
+                                   <div class="playbtn"></div>
+                               </div>
+                               <p class="liTtl">
+                               <span>2017.12.19</span><br>서울공대-현대차 제네시스 스타트업지원 협약식
+                               </p>
+                       </div>
+                       <div class="liWrap">
+                               <div class="thumbBox" style="background-image:url(../assets/img/170922.png)">
+                                   <div class="playbtn"></div>
+                               </div>
+                               <p class="liTtl">
+                               <span>2017.09.22</span><br>서울공대-현대중공업 기술교류회
+                               </p>
+                       </div>
+                    </div>
+                </div>
+                <div class="btnCenterBox mt60 mb80">
+                        <a href="../index.html"><button class="btn btn-white2" data-aos="fade-up">목록으로</button></a><br>
+                    </div>
+            </div>
+        </div>
+        <div class="main-footer">
+            <div class="mainfoot-in">
+                <ul>
+                    <li>주소 : 서울시 관악구 관악로 1 서울대학교 공과대학 화학생물공학부 302동 725호</li>
+                    <li>대표 E-mail : khchar@snu.ac.kr</li>
+                    <li>대표전화 : 02-880-7431</li>
+                </ul>
+            </div>s
+        </div>
+    </div>
+    <script src="../assets/js/common.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
