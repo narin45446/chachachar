@@ -456,6 +456,7 @@ h1.mainLogo{
    background:url(../img/logo1.png) no-repeat right center / 78px;
    float:left;
     font-size:16px;
+    white-space: nowrap;
 }
 .gnb{
    float:left;
