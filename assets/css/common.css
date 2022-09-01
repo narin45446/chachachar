@@ -1648,6 +1648,9 @@ body .text-df{
     .liWrap:not(:nth-child(2n)){
          margin-right:10px;
      }
+    .playbtn{
+        opacity: 100;
+    }
 }
 @media screen and (max-width:500px) {
     .liWrap{
