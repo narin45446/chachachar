@@ -1623,7 +1623,7 @@ body .text-df{
    padding-top: 10px;
 }
 .listSec{
-   padding: 60px 24px;
+   padding: 60px 16px;
 }
 @media screen and (max-width:1024px) {
      .liWrap{
