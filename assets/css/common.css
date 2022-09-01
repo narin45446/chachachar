@@ -979,7 +979,7 @@ h1.mainLogo{
        padding:0 10vw;
     }
     .gnb li a{
-       margin-right:8vw;
+       margin-right:7vw;
     }
     .gnb li:last-child a{
        margin-right:0;
@@ -1002,10 +1002,10 @@ h1.mainLogo{
     }
     .gnb{
         width: calc(100% - 280px);
-       padding:0 5vw;
+       padding:0 4vw;
     }
     .gnb li a{
-       margin-right:6vw;
+       margin-right:4vw;
     }
 }
 @media screen and (max-width:766px) {
