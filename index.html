@@ -173,6 +173,19 @@
                     </div>
                 </div>
             </div>
+            <style>
+                .A-cover{
+                    width:100%;
+                    position: absolute;
+                    top:0;
+                    left: 0;
+                }
+                .A-cover a{
+                    display:block;
+                    width:100%;
+                    height: 350px;
+                }
+            </style>
             <div class="section sec4">
                 <div class="innerSec">
                     <h3 class="mainH3"><b>쇼츠 영상</b></h3>
@@ -182,18 +195,23 @@
                     <div class="swiper mainslide2">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
+                                <div class="A-cover"><a href="#"></a></div>
                                <iframe width="100%" height="350" src="https://www.youtube.com/embed/pBsRBf_d9uo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                             <div class="swiper-slide">
+                                <div class="A-cover"><a href="#"></a></div>
                                 <iframe width="100%" height="350" src="https://www.youtube.com/embed/pBsRBf_d9uo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                             <div class="swiper-slide">
+                                <div class="A-cover"><a href="#"></a></div>
                                 <iframe width="100%" height="350" src="https://www.youtube.com/embed/pBsRBf_d9uo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                             <div class="swiper-slide">
+                                <div class="A-cover"><a href="#"></a></div>
                                 <iframe width="100%" height="350" src="https://www.youtube.com/embed/pBsRBf_d9uo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                             <div class="swiper-slide">
+                                <div class="A-cover"><a href="#"></a></div>
                                 <iframe width="100%" height="350" src="https://www.youtube.com/embed/pBsRBf_d9uo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div>
@@ -243,7 +261,8 @@
             },
             slidesPerView: "auto",
             pagination: {
-                el:'.swiper-pagination'
+                el:'.swiper-pagination',
+                clickable: true
             },
             autoplay: {
                 delay: 2000,
@@ -271,7 +290,8 @@
             centeredSlides: true,
             slidesPerView: "auto",
             pagination: {
-                el:'.swiper-pagination'
+                el:'.swiper-pagination',
+                clickable: true
             }
         });
         
